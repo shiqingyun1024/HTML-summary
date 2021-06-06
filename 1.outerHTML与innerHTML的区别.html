@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>outerHTML与innerHTML的区别</title>
+</head>
+<body>
+    <div id="app">
+        <ul class="all">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script>
+        let [innerHTML,outerHTML] = [document.querySelector('#app').innerHTML,document.querySelector('#app').outerHTML];
+        console.log(innerHTML);
+        console.log(typeof innerHTML);
+        // <ul class="all">
+        //     <li></li>
+        //     <li></li>
+        //     <li></li>
+        // </ul>
+        // string
+
+        console.log(outerHTML);
+        console.log(typeof outerHTML);
+        // <div id="app">
+        //     <ul class="all">
+        //         <li></li>
+        //         <li></li>
+        //         <li></li>
+        //     </ul>
+        // </div>
+        // string
+    </script>
+</body>
+</html>
