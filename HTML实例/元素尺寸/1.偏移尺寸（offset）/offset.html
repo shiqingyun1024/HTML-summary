@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>offset</title>
     <style>
+        body{
+            margin: 0;
+        }
         .offset-parent{
 
         }
@@ -21,18 +24,20 @@
 <body>
     <!-- offsetLeft、offsetTop、offsetWidth、offsetHeight -->
     <div class="offset-parent">
-        <div class="offset-child" style="width: 100px;">
+        <div class="offset-child">
 
         </div>
     </div>
     <script>
+        // document.querySelector('.offset-child').style.width获取的是行内样式style的值
+        // 如果没有行内样式，获取的是空字符串。
         let doc = document.querySelector('.offset-child');
-        let width = document.querySelector('.offset-child').width;
-        let width2 = document.querySelector('.offset-child').parentElement.width;
-        console.log(doc);
-        console.log(width);
-        console.log(width2);
-        
+        // let width = document.querySelector('.offset-child').width;
+        // let width2 = document.querySelector('.offset-child').parentElement.width;
+        console.log(doc.offsetTop);
+        console.log(doc.offsetLeft);
+        console.log(doc.offsetWidth);
+        console.log(doc.offsetHeight);
     </script>
 </body>
 </html>
