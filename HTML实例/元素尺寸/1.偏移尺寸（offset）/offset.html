@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>offset</title>
+    <style>
+        .offset-parent{
+
+        }
+        .offset-child{
+            margin: 30px;
+            padding: 20px;
+            height: 80px;
+            width: 80px;
+            border: 5px solid #9521de;
+            background-color: #2195de;
+        }
+    </style>
+</head>
+<body>
+    <!-- offsetLeft、offsetTop、offsetWidth、offsetHeight -->
+    <div class="offset-parent">
+        <div class="offset-child" style="width: 100px;">
+
+        </div>
+    </div>
+    <script>
+        let doc = document.querySelector('.offset-child');
+        let width = document.querySelector('.offset-child').width;
+        let width2 = document.querySelector('.offset-child').parentElement.width;
+        console.log(doc);
+        console.log(width);
+        console.log(width2);
+        
+    </script>
+</body>
+</html>
