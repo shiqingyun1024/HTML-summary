@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>客户端尺寸（client）</title>
+</head>
+<style>
+    .client-parent {
+        position: relative;
+        top: 100px;
+        left: 100px;
+
+    }
+
+    .client-child {
+        margin: 30px;
+        padding: 20px;
+        height: 80px;
+        width: 80px;
+        border: 5px solid #9521de;
+        background-color: #2195de;
+    }
+</style>
+
+<body>
+    <div class="client-parent">
+        <div class="client-child">
+
+        </div>
+    </div>
+    <script>
+        let client = document.querySelector('.client-child')
+        console.log(client.clientHeight); // 120px
+        console.log(client.clientWidth); // 120px
+        console.log(document.documentElement.clientHeight); // 会随着屏幕的大小而变化
+        console.log(document.documentElement.clientWidth); // 会随着屏幕的大小而变化
+    </script>
+</body>
+
+</html>
