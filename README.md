@@ -25,5 +25,16 @@ clientHeight：是内容区高度加上、下内边距高度。clientWidth = 上
 客户端尺寸实际就是元素内部的空间，因此不包含滚动条占用的空间。这两个属性最常用于确定浏览器视口尺寸，即检测document.documentElement的clientWidth和clientHeight。这两个属性表示视口（<html>或<body>元素）的尺寸。
 
 注意：与偏移尺寸一样，客户端尺寸也是只读的，而且每次访问都会重新计算。
-
+```
+### 3、滚动尺寸
+```
+滚动尺寸，提供了元素内容滚动距离的信息。有些元素，比如<html>无需任何代码就可以自动滚动，而其他元素则需要使用CSS的overflow属性令其滚动。滚动尺寸相关的属性有如下4个：
+scrollHeight: 没有滚动条出现时，元素内容的总高度。
+scrollLeft: 内容区左侧隐藏的像素数，设置这个属性可以改变元素的滚动位置。
+scrollTop: 内容区顶部隐藏的像素数，设置这个属性可以改变元素的滚动位置。
+scrollWidth: 没有滚动条出现时，元素内容的总宽度。
+```
+### 4、确定元素尺寸
+```
+浏览器在每个元素都暴露了getBoundingClientRect()方法，返回一个DOMRect对象，包含6个属性：left、top、right、bottom、height和width。这些属性给出了元素在页面中相对于视口的位置。
 ```
