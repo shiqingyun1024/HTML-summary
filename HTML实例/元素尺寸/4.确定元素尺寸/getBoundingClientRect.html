@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getBoundingClientRect</title>
+    <style>
+        .rect{
+            width: 200px;
+            height: 200px;
+            background-color: #2195de;
+            padding: 20px;
+            border: 5px solid #9521de;
+            position: absolute;
+            left: 300px;
+            top: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="rect"></div>
+    <script>
+        let rect = document.querySelector('.rect').getBoundingClientRect()
+        console.log(rect.width);
+        console.log(rect.height);
+        console.log(rect);
+        
+    </script>
+</body>
+</html>
