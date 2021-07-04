@@ -37,4 +37,9 @@ scrollWidth: 没有滚动条出现时，元素内容的总宽度。
 ### 4、确定元素尺寸
 ```
 浏览器在每个元素都暴露了getBoundingClientRect()方法，返回一个DOMRect对象，包含6个属性：left、top、right、bottom、height和width。这些属性给出了元素在页面中相对于视口的位置。
+其中left，top，right，bottom是相对于视口的位置（不是相对于父级元素的）
+left是元素的左边框距离视口左边的距离
+right是元素的右边框距离视口左边的距离（left+元素的width+左右padding+左右border）
+top是元素的上边框距离视口上边的距离
+bottom是元素的下边框距离视口上边的距离（top+元素的height+上下padding+上下border）
 ```

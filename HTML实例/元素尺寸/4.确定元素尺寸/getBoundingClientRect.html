@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>getBoundingClientRect</title>
     <style>
+        .rect-parent{
+            position: absolute;
+            left: 100px;
+            top: 100px;
+        }
         .rect{
             width: 200px;
             height: 200px;
@@ -18,11 +23,18 @@
     </style>
 </head>
 <body>
-    <div class="rect"></div>
+    <div class="rect-parent">
+        <div class="rect"></div>
+    </div>
+    
     <script>
         let rect = document.querySelector('.rect').getBoundingClientRect()
         console.log(rect.width);
         console.log(rect.height);
+        console.log(rect.top);
+        console.log(rect.left);
+        console.log(rect.right);
+        console.log(rect.bottom);
         console.log(rect);
         
     </script>
